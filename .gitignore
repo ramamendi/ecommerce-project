@@ -27,3 +27,7 @@ backend/Lib/
 backend/Scripts/
 backend/Include/
 backend/pyvenv.cfg
+# Database backups / migration files
+db_backup.sqlite3
+data.json
+data_utf8.json
