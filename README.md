@@ -1,86 +1,162 @@
-# Full-Stack E-Commerce Website
+# 🛒 Full-Stack E-Commerce Website
 
-A full-stack e-commerce application built with Django REST Framework
-and React.
+A full-stack e-commerce web application built using **React** and **Django REST Framework**.
 
-## Features
+The application provides separate experiences for **customers and administrators**, including product browsing, cart management, checkout, order tracking, product management, and order management.
 
-### Customer
-- User registration and login
+---
+
+## 🚀 Features
+
+### 👤 Customer Features
+
+- User registration
+- User login and logout
 - JWT authentication
-- Browse products
+- Browse available products
+- View product details
 - Add products to cart
-- Update cart quantity
-- Remove cart items
+- Increase/decrease product quantity
+- Remove products from cart
+- View cart total
 - Checkout
 - View order history
+- Track order status
+- Product availability handling
 
-### Admin
+### 👨‍💼 Admin Features
+
 - Admin authentication
-- Admin dashboard
+- Protected admin dashboard
 - Add products
 - Edit products
 - Delete products
-- Activate/deactivate products
 - Manage product stock
+- Activate/deactivate products
 - View all customer orders
 - Update order status
+- Separate admin navigation
+- Protected admin routes
 
-## Tech Stack
+### 🔐 Authentication & Security
 
-Frontend:
+- JWT-based authentication
+- Access and refresh tokens
+- Automatic access-token refresh
+- Axios request/response interceptors
+- Role-based access control
+- Protected admin routes
+- Environment variables for database credentials
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+
 - React
 - React Router
 - Axios
 - Bootstrap
+- Vite
 
-Backend:
+### Backend
+
 - Python
 - Django
 - Django REST Framework
-- JWT Authentication
+- Simple JWT
 
-Database:
-- MySQL
+### Database
 
-Other:
+- MySQL 8.4
+
+### Image Storage
+
 - Cloudinary
-- Git/GitHub
 
-## Authentication
+### Development Tools
 
-JWT authentication is used to secure API requests.
+- Git
+- GitHub
+- VS Code
+- MySQL Workbench
 
-Access and refresh tokens are stored on the frontend.
-Axios interceptors automatically attach the access token and
-refresh it when required.
+---
 
-## User Roles
+## 🏗️ Project Architecture
 
-CUSTOMER
-- Shopping and order functionality
+```text
+                    React Frontend
+                         │
+                         │ REST API / Axios
+                         ▼
+              Django REST Framework
+                         │
+          ┌──────────────┼──────────────┐
+          │              │              │
+          ▼              ▼              ▼
+        Users         Products       Cart / Orders
+          │              │              │
+          └──────────────┼──────────────┘
+                         │
+                         ▼
+                     MySQL 8.4
+                         
+                     Cloudinary
+                   Product Images
 
-ADMIN
-- Product and order management
 
-## Main API Modules
 
-/users/
-/products/
-/cart/
-/orders/
-
-## Project Structure
-
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── api/
-│   └── App.jsx
-
-backend/
-├── users/
-├── products/
+📁 Project Structure
+ecommerce-project/
+│
 ├── cart/
-└── orders/
+│   ├── migrations/
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+│
+├── config/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── orders/
+│   ├── migrations/
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+│
+├── products/
+│   ├── migrations/
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+│
+├── users/
+│   ├── migrations/
+│   ├── models.py
+│   ├── permissions.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+│
+├── frontend/
+│   ├── src/
+│   │   ├── api/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── package.json
+│   └── vite.config.js
+│
+├── manage.py
+├── requirements.txt
+├── .gitignore
+└── README.md
