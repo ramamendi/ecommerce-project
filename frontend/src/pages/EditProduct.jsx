@@ -111,15 +111,16 @@ setIsActive(product.is_active);
         formData.append("image", image);
       }
 
-      await api.put(
+     await api.put(
   `/products/products/${id}/`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
-
+  formData,
+  {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "multipart/form-data",
+    },
+  }
+);
       alert("Product updated successfully!");
 
       navigate("/admin");
