@@ -51,11 +51,11 @@ if (!originalRequest) {
 
       try {
         const response = await axios.post(
-          "http://127.0.0.1:8000/api/users/token/refresh/",
-          {
-            refresh: refreshToken,
-          }
-        );
+  `${import.meta.env.VITE_API_URL}/users/token/refresh/`,
+  {
+    refresh: refreshToken,
+  }
+);
 
         const newAccessToken =
           response.data.access;
