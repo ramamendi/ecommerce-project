@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import api from "../api/axios";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+
 function EditProduct() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -26,8 +27,7 @@ function EditProduct() {
       const token = localStorage.getItem("access");
 
       try {
-        const response = await api.get(
-          `http://127.0.0.1:8000/api/products/products/${id}/`,
+        const response = await api.get(`/products/products/${id}/`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -64,8 +64,7 @@ setIsActive(product.is_active);
       const token = localStorage.getItem("access");
 
       try {
-        const response = await api.get(
-          "http://127.0.0.1:8000/api/products/categories/",
+        const response = await api.get("/products/categories/",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -113,8 +112,7 @@ setIsActive(product.is_active);
       }
 
       await api.put(
-        `http://127.0.0.1:8000/api/products/products/${id}/`,
-        formData,
+  `/products/products/${id}/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
