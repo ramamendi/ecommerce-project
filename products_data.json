@@ -1,0 +1,130 @@
+[
+{
+  "model": "products.category",
+  "pk": 1,
+  "fields": {
+    "name": "Electronics",
+    "description": "Electronic devices and accessories"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "category": 1,
+    "name": "Wireless Headphones",
+    "description": "Bluetooth wireless headphones",
+    "price": "2499.00",
+    "stock": 19,
+    "image": "",
+    "is_active": true,
+    "created_at": "2026-08-15T11:27:33.483Z",
+    "updated_at": "2026-08-16T06:48:59.646Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "category": 1,
+    "name": "Smart Watch",
+    "description": "Fitness and Bluetooth smart watch",
+    "price": "3999.00",
+    "stock": 13,
+    "image": "",
+    "is_active": false,
+    "created_at": "2026-08-15T11:41:55.013Z",
+    "updated_at": "2026-08-16T13:17:26.539Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "category": 1,
+    "name": "Bluetooth Speaker",
+    "description": "Portable Bluetooth speaker",
+    "price": "1999.00",
+    "stock": 10,
+    "image": "",
+    "is_active": true,
+    "created_at": "2026-08-15T12:55:52.120Z",
+    "updated_at": "2026-08-15T12:55:52.120Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "category": 1,
+    "name": "Bluetooth Speaker",
+    "description": "Portable Bluetooth speaker",
+    "price": "1999.00",
+    "stock": 9,
+    "image": "",
+    "is_active": true,
+    "created_at": "2026-08-15T12:56:41.536Z",
+    "updated_at": "2026-08-15T12:56:41.536Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "category": 1,
+    "name": "Bluetooth Speaker",
+    "description": "Portable Bluetooth speaker",
+    "price": "1999.00",
+    "stock": 10,
+    "image": "products/9fc894a06b1a330079d350a08f142930600x60085_fwsykv",
+    "is_active": true,
+    "created_at": "2026-08-15T12:57:45.544Z",
+    "updated_at": "2026-08-15T12:57:45.544Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "category": 1,
+    "name": "USB-C Fast Charger",
+    "description": "20W USB-C fast charger",
+    "price": "999.00",
+    "stock": 25,
+    "image": "products/51SrWaH8JTL._AC_UF10001000_QL80__ypdadr",
+    "is_active": false,
+    "created_at": "2026-08-15T18:58:09.453Z",
+    "updated_at": "2026-08-15T18:58:09.453Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "category": 1,
+    "name": "USB-C Fast Charger",
+    "description": "20W USB-C fast charger",
+    "price": "1477.00",
+    "stock": 18,
+    "image": "products/51SrWaH8JTL._AC_UF10001000_QL80__xd2qpv",
+    "is_active": true,
+    "created_at": "2026-08-15T18:59:12.210Z",
+    "updated_at": "2026-08-15T19:04:51.215Z"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "category": 1,
+    "name": "USB Cable Test",
+    "description": "Test USB cable",
+    "price": "398.89",
+    "stock": 50,
+    "image": "products/shopping_img_nhg095",
+    "is_active": true,
+    "created_at": "2026-08-16T06:56:19.802Z",
+    "updated_at": "2026-08-16T06:59:59.307Z"
+  }
+}
+]
